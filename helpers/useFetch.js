@@ -7,11 +7,6 @@ const useFetch = (path) => {
   });
 
   React.useEffect(() => {
-    setState({
-      data: null,
-      loading: true,
-    });
-
     fetch(`http://localhost:8181${path}`)
       .then((response) => response.json())
       .then((response) => {
